@@ -6,7 +6,9 @@
 
 [在线阅读](https://tiee7.github.io/dot-green-book/) · [学习路线](https://tiee7.github.io/dot-green-book/learn/) · [问答手册](https://tiee7.github.io/dot-green-book/faq/) · [Dot 案例](https://tiee7.github.io/dot-green-book/cases/) · [参与共建](CONTRIBUTING.md)
 
-本项目基于 [dot-guide](https://github.com/Tiee7/dot-guide) 的内容主题与公开来源线索重新编写，独立维护。产品事实以 [Dot 官方说明](https://learn.chatgpt.com/docs/dots) 为依据，首版核对日期 **2026-10-01**。这是独立教程，不是 OpenAI 官方项目。
+[dot-guide 在线阅读](https://dot.1idea.xyz/) · [持续更新的 Showcase](https://dot.1idea.xyz/showcase/)
+
+本项目参考私人闭源项目 **dot-guide** 的内容主题与来源整理，重新编写为开源中文手册，独立维护。dot-guide 的源码仓库不对公众开放，公开阅读入口是 [dot.1idea.xyz](https://dot.1idea.xyz/)。产品事实以 [Dot 官方说明](https://learn.chatgpt.com/docs/dots) 为依据，首版核对日期 **2026-10-01**。
 
 ## 先做一件事，再多走一步
 
@@ -31,6 +33,8 @@
 
 查看 [案例审查记录](docs/case-review.md) 和网站“关于与共建”页面的评分标准。教程指令与操作步骤是教学改编，尚未替读者执行，不伪装成原作者逐字提示词。
 
+更多在线更新的作品见 [Showcase](https://dot.1idea.xyz/showcase/)。该展厅包含不同产品的作品；本书仍逐条核对 Dot 归属、原帖与证据后收录，展厅更新不代表本书已完成新案例审查。
+
 ## 本地阅读与开发
 
 需要 **Node.js 20.11+**。没有运行时依赖，不需要 `npm install`、API Key 或后端账户。
@@ -49,6 +53,17 @@ SITE_BASE=/dot-green-book/ npm run build
 
 `build` 从内容生成静态页面，并检查数据完整性、Dot 案例资格与评分、路由、内部链接及锚点。它不能证明实际 Dot 账号已完成任何练习。
 
+## 导出完整 PDF
+
+PDF 导出另外需要 Python 3.10+、`reportlab`、`pypdf` 和可嵌入的中文 TrueType 字体。站点阅读与构建不依赖这些组件。
+
+```sh
+python3 -m pip install reportlab pypdf
+python3 scripts/export_pdf.py
+```
+
+导出脚本会先用 Node.js 重建站点，再从最新内容生成 `output/pdf/Dot小绿皮书-完整版.pdf`，包含教程、问答、精选案例、关于页和来源、共建、审查、项目说明、验收与许可附录。macOS 默认使用系统黑体；其他环境可通过 `--font-regular` 与 `--font-bold` 指定中文字体。目录、书签和来源链接可点击；完整性检查通过后才替换旧 PDF。
+
 ## 项目结构
 
 ```text
@@ -56,6 +71,7 @@ content/                课程、问答与Dot精选案例，单一内容来源
 scripts/build.mjs       静态页面生成器
 scripts/check.mjs       内容与内部链接检查
 scripts/serve.mjs       本地预览服务器
+scripts/export_pdf.py   完整PDF导出（可选，依赖Python与中文字体）
 site.css / site.js      阅读界面与轻量交互
 docs/                   来源、案例审查和验收记录
 .github/                Issue模板与GitHub Pages工作流

@@ -4,7 +4,9 @@
 
 ## 项目基础
 
-用户指定基础仓库：[Tiee7/dot-guide](https://github.com/Tiee7/dot-guide)。使用 `main` 的 `134f1af17498777ea92e8c27074c0c1957f53779` 作为本次内容参考快照。重新编写学习路线、问答与阅读界面；不复制原仓库 Git 历史、部署元数据、来源本机路径或混合模型案例库。原仓库不修改。
+本书参考私人闭源项目 dot-guide 的内容主题与公开来源线索，重新编写学习路线、问答与阅读界面，独立维护。dot-guide 的原仓库不对公众开放；读者请使用 [dot.1idea.xyz 公开阅读入口](https://dot.1idea.xyz/)，更多在线更新的作品见 [Showcase](https://dot.1idea.xyz/showcase/)。不复制原仓库 Git 历史、部署元数据、来源本机路径或混合模型案例库，原仓库不修改。
+
+本书当前精选保留 2026-10-01 至 2026-10-02 审查批次的 10 个案例及其证据边界。在线 Showcase 提供后续阅读和候选线索；本书仍逐条核对 Dot 归属、原帖与评分后精选，新增内容不能视为本批已经审查的结果。
 
 ## 一手产品资料
 
@@ -31,5 +33,7 @@
 ## 更新方法
 
 产品事实变化时重新读取对应官方页面，记录日期、变化与受影响的内容。案例原帖失效、删除或归属有疑问时重新审查，不仅依据上游摘要保留高分。
+
+增补案例时可先查看 [更多在线更新的 Showcase](https://dot.1idea.xyz/showcase/) 作品，再回到原作者分享检查 Dot 身份、任务过程、可见输出和未验证项。记录新的核对日期、来源与收录决定，保留本批审查记录。
 
 站点发布方式参照 [GitHub Pages 自定义工作流官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)，采用构建、上传静态产物和独立部署任务。发布是否成功需另查 Actions 与在线页面。
