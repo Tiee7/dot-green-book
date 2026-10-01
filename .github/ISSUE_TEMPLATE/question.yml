@@ -1,0 +1,18 @@
+name: 提问或纠正内容
+description: 提交使用问题、产品变化或错误
+title: '[问答] '
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题或需要修正的内容
+      description: 写清所在章节、看到的现象与期待结果。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 已知条件与证据
+      description: 可附官方文档链接、版本与脱敏记录。不要粘贴凭据或私人信息。
+    validations:
+      required: true

@@ -1,0 +1,34 @@
+name: 提交 Dot 用户案例
+description: 请提供明确来自 ChatGPT Dot 的真实任务和证据
+title: '[Dot案例] '
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Dot 完成了什么具体任务？
+      description: 写清任务目标、输入资料、Dot 的角色与结果。
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 原始来源
+      description: 用户公开原帖、录屏或可公开的脱敏记录链接。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 哪些结果可检查？哪些尚未验证？
+      description: 说明可见输出、失败或限制。不要提供密码、私人邮箱或内部资料。
+    validations:
+      required: true
+  - type: checkboxes
+    id: product
+    attributes:
+      label: 产品归属
+      options:
+        - label: 这是 ChatGPT Dot 的案例，能够从来源判断 Dot 的具体作用。
+          required: true
+        - label: 我有权公开这份材料，且已经去除个人与第三方敏感信息。
+          required: true
