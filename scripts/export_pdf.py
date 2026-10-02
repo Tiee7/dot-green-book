@@ -431,7 +431,7 @@ class Exporter:
             self.paragraph("外站展厅包含不同产品的作品。本书精选仍逐条核对 Dot 归属、原帖与证据，不把外站新增展示自动视为本书已经核对的案例。"),
             self.link("Dot小绿皮书在线阅读", PUBLIC_SITE),
             self.heading("阅读方法"),
-            self.paragraph("第一次使用，从第一章开始。遇到具体问题，查问答手册；读案例时，同时查看结果、证据和限制。所有 18 条章内及案例练习指令均完整保留，可以复制后按自己的材料调整。"),
+            self.paragraph(f"第一次使用，从第一章开始。遇到具体问题，查问答手册；读案例时，同时查看结果、证据和限制。所有 {len(chapters) + len(cases)} 条章内及案例练习指令均完整保留，可以复制后按自己的材料调整。"),
             self.paragraph("产品事实和案例原帖会变化；使用前核对当前账户、权限、工具、日期与原始来源。案例分数衡量编辑学习价值，不能替代你对结果的检查。"),
             PageBreak(), self.heading("目录"),
             self.paragraph("点击目录项目或打开 PDF 阅读器的书签面板，即可跳转。页码包含封面。", "small"),
@@ -487,7 +487,7 @@ class Exporter:
                     story.append(KeepTogether(item))
                 story.append(PageBreak())
         story.extend([self.heading("第三部分 Dot 用户案例", bookmark=True),
-                      self.paragraph(f"{len(cases)} 个经过原帖核对的精选案例，编辑学习价值评分均为 8-9 分。学习步骤和指令是教学改编，不是原作者逐字提示词或已经完成的实测。", "subtitle"),
+                      self.paragraph(f"{len(cases)} 个经过原帖核对的精选案例，编辑学习价值评分均为 8 分及以上。学习步骤和指令是教学改编，不是原作者逐字提示词或已经完成的实测。", "subtitle"),
                       self.link("持续更新的 Showcase", PUBLIC_SHOWCASE),
                       self.paragraph("在线展厅是后续阅读和候选线索；本书当前案例仍以逐条核对的来源与审查日期为准。"), PageBreak()])
         for i, c in enumerate(cases, 1):

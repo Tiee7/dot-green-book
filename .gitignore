@@ -5,3 +5,5 @@ node_modules/
 .vercel/
 artifacts/
 *.log
+output/
+tmp/pdfs/

@@ -2,9 +2,9 @@
 
 一本循序渐进教你使用 **ChatGPT Dot** 的开源中文手册。从第一次交代小任务，走到资料连接、持续跟进、任务委派和成果验收。
 
-首版包含 **8 章课程、61 条问答、10 个编辑学习价值 8–9 分的 Dot 用户案例**。
+当前 **v0.2.0** 包含 **8 章课程、61 条问答、21 个编辑学习价值 8 分及以上的 Dot 用户案例**。本版新增 11 个案例，核对日期为 **2026-10-02**。
 
-[在线阅读](https://tiee7.github.io/dot-green-book/) · [学习路线](https://tiee7.github.io/dot-green-book/learn/) · [问答手册](https://tiee7.github.io/dot-green-book/faq/) · [Dot 案例](https://tiee7.github.io/dot-green-book/cases/) · [参与共建](CONTRIBUTING.md)
+[下载完整 PDF](https://github.com/Tiee7/dot-green-book/releases/latest/download/dot-green-book.pdf) · [在线阅读](https://tiee7.github.io/dot-green-book/) · [学习路线](https://tiee7.github.io/dot-green-book/learn/) · [问答手册](https://tiee7.github.io/dot-green-book/faq/) · [Dot 案例](https://tiee7.github.io/dot-green-book/cases/) · [参与共建](CONTRIBUTING.md)
 
 [dot-guide 在线阅读](https://dot.1idea.xyz/) · [持续更新的 Showcase](https://dot.1idea.xyz/showcase/)
 
@@ -35,6 +35,26 @@
 
 更多在线更新的作品见 [Showcase](https://dot.1idea.xyz/showcase/)。该展厅包含不同产品的作品；本书仍逐条核对 Dot 归属、原帖与证据后收录，展厅更新不代表本书已完成新案例审查。
 
+## 这一版新增的 11 个案例
+
+分数沿用五项学习价值标准，包含有成果的任务，也保留值得学习的纠错与验收场景。
+
+| 案例 | 分数 |
+| --- | --- |
+| [把 Gmail 邮件整理成带项目背景的待办页](https://tiee7.github.io/dot-green-book/cases/gmail-project-todo-board/) | 9/10 |
+| [把项目和待办放进一页个人手记](https://tiee7.github.io/dot-green-book/cases/personal-project-scratchpad/) | 8/10 |
+| [活动前，把主办方路线说明整理成出门提醒](https://tiee7.github.io/dot-green-book/cases/event-indoor-directions-reminder/) | 9/10 |
+| [会前把邮件附件与历史讨论对照成问题清单](https://tiee7.github.io/dot-green-book/cases/pre-meeting-study-question-list/) | 10/10 |
+| [重要付款邮件到来后，先提醒并保留凭证入口](https://tiee7.github.io/dot-green-book/cases/payment-email-source-notification/) | 9/10 |
+| [先让 Dot 给会议候选，再纠正你的选时标准](https://tiee7.github.io/dot-green-book/cases/calendar-options-preference-correction/) | 8/10 |
+| [做一个浮岛平台游戏，交付公开试玩入口](https://tiee7.github.io/dot-green-book/cases/cloudfruit-odyssey-live-game/) | 9/10 |
+| [从 Blender 相机模型，接成可交互的网页场景](https://tiee7.github.io/dot-green-book/cases/retro-camera-interactive-scene/) | 9/10 |
+| [让 Dot 做动画角色，再逐段检查姿态和手部](https://tiee7.github.io/dot-green-book/cases/animated-character-pose-review/) | 8/10 |
+| [审查 CI 时先纠正阻塞原因，再辨认安全暂停](https://tiee7.github.io/dot-green-book/cases/ci-status-correction-and-pause/) | 9/10 |
+| [让 Dot 制作自我介绍片，再检验是否真的讲清楚](https://tiee7.github.io/dot-green-book/cases/intro-video-clarity-check/) | 8/10 |
+
+每条都有原帖、Dot 的作用、可见结果、未验证部分及可复制练习。完整审查见 [案例审查记录](docs/case-review.md)。
+
 ## 本地阅读与开发
 
 需要 **Node.js 20.11+**。没有运行时依赖，不需要 `npm install`、API Key 或后端账户。
@@ -53,7 +73,17 @@ SITE_BASE=/dot-green-book/ npm run build
 
 `build` 从内容生成静态页面，并检查数据完整性、Dot 案例资格与评分、路由、内部链接及锚点。它不能证明实际 Dot 账号已完成任何练习。
 
-## 导出完整 PDF
+## 下载与导出完整 PDF
+
+完整 PDF 放在 **GitHub Release**，网站和 README 共用一个最新版下载入口，适合收藏、分享与离线阅读：
+
+- [下载最新版完整 PDF](https://github.com/Tiee7/dot-green-book/releases/latest/download/dot-green-book.pdf)
+- [v0.2.0 完整 PDF](https://github.com/Tiee7/dot-green-book/releases/download/v0.2.0/dot-green-book.pdf)：固定版本，方便引用与归档
+- [所有版本与更新说明](https://github.com/Tiee7/dot-green-book/releases)
+
+PDF 包含全部课程、问答、案例及附录，有可点击目录、书签和来源链接。网站会继续更新，PDF 按 Release 保留内容快照；想持续发现新作品，可浏览 [在线 Showcase](https://dot.1idea.xyz/showcase/)。
+
+每次发布使用相同的附件名 `dot-green-book.pdf`，最新版链接会指向最新正式 Release 的附件。较大的 PDF 作为发布附件保存，不放入源码历史。需要自行生成时：
 
 PDF 导出另外需要 Python 3.10+、`reportlab`、`pypdf` 和可嵌入的中文 TrueType 字体。站点阅读与构建不依赖这些组件。
 
