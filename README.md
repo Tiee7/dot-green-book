@@ -2,7 +2,7 @@
 
 一本循序渐进教你使用 **ChatGPT Dot** 的开源中文手册。从第一次交代小任务，走到资料连接、持续跟进、任务委派和成果验收。
 
-当前 **v0.2.0** 包含 **8 章课程、61 条问答、21 个编辑学习价值 8 分及以上的 Dot 用户案例**。本版新增 11 个案例，核对日期为 **2026-10-02**。
+当前 **v0.2.1** 包含 **8 章课程、61 条问答、21 个编辑学习价值 8 分及以上的 Dot 用户案例**。本版使用 [qu-ai-wei](https://github.com/LifelongLazyLearner/qu-ai-wei) 重写问答部分，调整回答顺序与中文表达，保留产品事实、来源和操作条件。查看 [61 条问答的前后对比](docs/faq-rewrite-comparison.md)。
 
 [下载完整 PDF](https://github.com/Tiee7/dot-green-book/releases/latest/download/dot-green-book.pdf) · [在线阅读](https://tiee7.github.io/dot-green-book/) · [学习路线](https://tiee7.github.io/dot-green-book/learn/) · [问答手册](https://tiee7.github.io/dot-green-book/faq/) · [Dot 案例](https://tiee7.github.io/dot-green-book/cases/) · [参与共建](CONTRIBUTING.md)
 
@@ -35,9 +35,9 @@
 
 更多在线更新的作品见 [Showcase](https://dot.1idea.xyz/showcase/)。该展厅包含不同产品的作品；本书仍逐条核对 Dot 归属、原帖与证据后收录，展厅更新不代表本书已完成新案例审查。
 
-## 这一版新增的 11 个案例
+## v0.2.0 增补的 11 个案例
 
-分数沿用五项学习价值标准，包含有成果的任务，也保留值得学习的纠错与验收场景。
+核对日期为 **2026-10-02**。分数沿用五项学习价值标准，包含有成果的任务，也保留值得学习的纠错与验收场景。
 
 | 案例 | 分数 |
 | --- | --- |
@@ -78,7 +78,7 @@ SITE_BASE=/dot-green-book/ npm run build
 完整 PDF 放在 **GitHub Release**，网站和 README 共用一个最新版下载入口，适合收藏、分享与离线阅读：
 
 - [下载最新版完整 PDF](https://github.com/Tiee7/dot-green-book/releases/latest/download/dot-green-book.pdf)
-- [v0.2.0 完整 PDF](https://github.com/Tiee7/dot-green-book/releases/download/v0.2.0/dot-green-book.pdf)：固定版本，方便引用与归档
+- [v0.2.1 完整 PDF](https://github.com/Tiee7/dot-green-book/releases/download/v0.2.1/dot-green-book.pdf)：固定版本，方便引用与归档
 - [所有版本与更新说明](https://github.com/Tiee7/dot-green-book/releases)
 
 PDF 包含全部课程、问答、案例及附录，有可点击目录、书签和来源链接。网站会继续更新，PDF 按 Release 保留内容快照；想持续发现新作品，可浏览 [在线 Showcase](https://dot.1idea.xyz/showcase/)。

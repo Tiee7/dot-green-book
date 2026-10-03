@@ -473,19 +473,17 @@ class Exporter:
         for q in faq:
             groups.setdefault(q["category"], []).append(q)
         for category, questions in groups.items():
-            for start in range(0, len(questions), 3):
-                if start == 0:
-                    story.append(self.heading(category, level=1, style="h2", bookmark=True))
-                for q in questions[start:start + 3]:
-                    item = [self.heading(f"{q['id'].upper()} {q['question']}", style="h2"),
-                            self.paragraph(q["answer"], "faq"),
-                            self.paragraph("可以先做：" + q["action"], "faq"),
-                            self.paragraph("关联章节：" + chapter_labels[q["chapterId"]], "small")]
-                    item.extend(self.source_links(q["sourceUrls"]))
-                    item.append(self.link("打开这条问答", PUBLIC_SITE + f"faq/#{q['id']}"))
-                    item.append(Spacer(1, 12))
-                    story.append(KeepTogether(item))
-                story.append(PageBreak())
+            story.append(self.heading(category, level=1, style="h2", bookmark=True))
+            for q in questions:
+                item = [self.heading(f"{q['id'].upper()} {q['question']}", style="h2"),
+                        self.paragraph(q["answer"], "faq"),
+                        self.paragraph("可以先做：" + q["action"], "faq"),
+                        self.paragraph("关联章节：" + chapter_labels[q["chapterId"]], "small")]
+                item.extend(self.source_links(q["sourceUrls"]))
+                item.append(self.link("打开这条问答", PUBLIC_SITE + f"faq/#{q['id']}"))
+                item.append(Spacer(1, 12))
+                story.append(KeepTogether(item))
+            story.append(PageBreak())
         story.extend([self.heading("第三部分 Dot 用户案例", bookmark=True),
                       self.paragraph(f"{len(cases)} 个经过原帖核对的精选案例，编辑学习价值评分均为 8 分及以上。学习步骤和指令是教学改编，不是原作者逐字提示词或已经完成的实测。", "subtitle"),
                       self.link("持续更新的 Showcase", PUBLIC_SHOWCASE),
